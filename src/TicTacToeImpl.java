@@ -34,6 +34,7 @@ public class TicTacToeImpl extends UnicastRemoteObject
   public char connect(CallBack client) throws RemoteException {
     if (player1 == null) {
       // player1 (first player) registered
+
       player1 = client;
       player1.notify("Wait for a second player to join");
       return 'X';
